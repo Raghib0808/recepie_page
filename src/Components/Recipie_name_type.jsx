@@ -7,13 +7,13 @@ const RecipeNameType = () => {
   const [expandedRecipe, setExpandedRecipe] = useState(null); 
   const BASE_URL = "https://api.spoonacular.com/recipes";
   const apiKey = 'c96d307285d245a9bd1b24e509052591';
-
+// flsjdflkj skdlf 
   const api = async () => {
     try {
       const response = await fetch(
         `${BASE_URL}/complexSearch?apiKey=${apiKey}&number=10&addRecipeInformation=true&addRecipeNutrition=true`
       );
-      const value = await response.json();
+      const value =await response.json();
       setData(value.results);  
       console.log(value);
     } catch (error) {
