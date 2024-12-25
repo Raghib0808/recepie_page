@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import DOMPurify from 'dompurify';
-import Skeleton from './skeleton';
+import Skeleton from './Shimmer';
 
 const RecipeNameType = () => {
   const [data, setData] = useState([]);
