@@ -6,7 +6,7 @@ const RecipeNameType = () => {
   const [data, setData] = useState([]);
   const [expandedRecipe, setExpandedRecipe] = useState(null); 
   const BASE_URL = "https://api.spoonacular.com/recipes";
-  const apiKey = 'c96d307285d245a9bd1b24e509052591';
+  const apiKey = '3ded09f5fc054e248d1137dc1a6e93a9';
 // flsjdflkj skdlf 
   const api = async () => {
     try {
