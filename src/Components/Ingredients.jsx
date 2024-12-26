@@ -24,21 +24,41 @@ const Ingredients = ({
                 <img
                     src={imageUrl}
                     alt={rowData.nameClean}
-                    style={{ width: '50px', height: '50px', borderRadius: '50%' }}
+                    style={{ width: '80px', height: '60px', borderRadius: '50%' }}
                 />
             );
         };
      
     
   return (
+    <>
     <div>
-            <DataTable value={Ingredients}>
-                <Column field="nameClean" header="Ingredients"></Column>
-                 <Column field="original" header="Quantity "></Column>
+        <h1>Prepration Method:</h1>
+        {/* <p>{props.instructions}</p> */}
+        <div style={{
+    backgroundColor: '#f9f9f9',
+    padding: '20px',
+    borderRadius: '8px',
+    fontFamily: 'Arial, sans-serif',
+    lineHeight: '1.6',
+    color: '#333',
+    boxShadow: '0 4px 8px rgba(111, 106, 177, 0.6)', // Purple shadow effect
+    transition: 'box-shadow 0.3s ease-in-out', // Smooth shadow transition
+}}
+                    dangerouslySetInnerHTML={{ __html: props.instructions }} />
+        </div>
+    <div className=''>
+            <h1>Ingredients List: </h1>
+    </div>
+    <div>
+            <DataTable showGridlines tableStyle={{ minWidth: '50rem' }} value={Ingredients}>
                  <Column header="Image" body={imageTemplate}></Column>
+                 <Column field="original" header="Quantity "></Column>
+                <Column field="nameClean" header="Ingredients"></Column>
                 
             </DataTable>
         </div>
+    </>
   )
 }
 

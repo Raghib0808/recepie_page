@@ -5,7 +5,7 @@
     flex-direction: row;
     min-height: 300px;
     overflow: hidden;
-    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    background: linear-gradient(135deg, #aec6d4 0%, #6f6ab1 100%);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -83,4 +83,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+.ing{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+ .p-datatable .p-datatable-tbody > tr > td,
+.p-datatable .p-datatable-thead > tr > th {
+    border-color: grey !important; /* Purple gridlines */
+}
+
+ .p-datatable .p-datatable-tbody > tr:hover {
+    background-color: rgba(111, 106, 177, 0.1) !important; /* Light purple hover */
 }

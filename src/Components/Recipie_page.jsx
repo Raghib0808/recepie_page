@@ -6,7 +6,7 @@ const Recipie_page = () => {
     const [loading,SetLoading]=useState(true)
 
     const load=async()=>{
-        const data=await fetch("https://api.spoonacular.com/recipes/716406/information?apiKey=3ded09f5fc054e248d1137dc1a6e93a9");
+        const data=await fetch("https://api.spoonacular.com/recipes/716627/information?apiKey=3ded09f5fc054e248d1137dc1a6e93a9");
         const output=await data.json();
         console.log(output);
         SetLoading(false)
