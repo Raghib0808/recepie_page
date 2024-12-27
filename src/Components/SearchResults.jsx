@@ -46,28 +46,32 @@ const SearchResults = () => {
       
     <h1 className="search-results-title">Search Results for "{query}"</h1>
     
-      <div className="recipes-list">
-        {recipes.length > 0 ? (
-          <ul className="recipes-ul">
-            {recipes.map((recipe) => (
-              <li
-                key={recipe.id}
-                className="recipe-item"
-                onClick={() => handleViewRecipe(recipe.id)}
-              >
-                <h3 className="recipe-title">{recipe.title}</h3>
-                <img
-                  src={recipe.image}
-                  alt={recipe.title}
-                  className="recipe-image"
-                />
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="no-results">No recipes found. Try a different search term.</p>
-        )}
-      </div>
+    <div className="recipes-list">
+  {recipes.length > 0 ? (
+    <div className="recipes-container">
+      {recipes.map((recipe) => (
+        <div
+          key={recipe.id}
+          className="recipe-card"
+          onClick={() => handleViewRecipe(recipe.id)}
+        >
+          <img
+            src={recipe.image}
+            alt={recipe.title}
+            className="recipe-card-image"
+          />
+          <div className="recipe-card-content">
+            <h3 className="recipe-card-title">{recipe.title}</h3>
+            <p className="recipe-card-description">{recipe.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  ) : (
+    <p className="no-results">No recipes found. Try a different search term.</p>
+  )}
+</div>
+
     </div>
   );
 };

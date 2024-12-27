@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import Recipie_name_type from './Components/Recipie_name_type'
 import Nav_bar from './Components/Nav_bar'
@@ -11,6 +9,7 @@ import Footer from './Components/Footer'
 import './footer.css';
 import SearchResults from './Components/SearchResults'
 import './SearchResults.css'; 
+import './Recipie_page.css'
 
 function App() {
 

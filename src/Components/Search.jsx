@@ -12,7 +12,7 @@ const Search = () => {
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
       <h1>Recipe Search</h1>
       <div style={{ marginBottom: '20px' }}>
-        <input
+        <input className='in'
           type="text"
           placeholder="Search by recipe name or ingredients..."
           value={query}
