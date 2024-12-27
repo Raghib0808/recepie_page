@@ -10,8 +10,44 @@ import './footer.css';
 import SearchResults from './Components/SearchResults'
 import './SearchResults.css'; 
 import './Recipie_page.css'
+import { useState,useEffect } from 'react'
+import Loader from './Components/Loader'
+import './Loader.css'
+
 
 function App() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    let timer;
+    const startTime = Date.now();
+
+    const handleLoaded = () => {
+      const elapsedTime = Date.now() - startTime;
+      const remainingTime = Math.max(3000 - elapsedTime, 0);
+
+      timer = setTimeout(() => {
+        setIsLoading(false);
+      }, remainingTime);
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoaded();
+    } else {
+      window.addEventListener('load', handleLoaded);
+    }
+
+    return () => {
+      window.removeEventListener('load', handleLoaded);
+      if (timer) clearTimeout(timer);
+    };
+  }, []);
+
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
  
