@@ -73,10 +73,9 @@ const Search = () => {
       {error && <p style={{ color: 'red' }}>{error}</p>}
 
       <div>
-        {recipes.length > 0 ? (
+        
           <div>
-            <h2>Search Results:</h2>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
+             <ul style={{ listStyle: 'none', padding: 0 }}>
               {recipes.map((recipe) => (
                 <li
                   key={recipe.id}
@@ -100,9 +99,7 @@ const Search = () => {
               ))}
             </ul>
           </div>
-        ) : (
-          !loading && <p>No recipes found. Try a different search term.</p>
-        )}
+     
       </div>
     </div>
   );

@@ -7,7 +7,8 @@ import Nav_bar from './Components/Nav_bar'
 import Recipie_page from './Components/Recipie_page'
 import './Recipie_page.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import Footer from './Components/Footer'
+import './footer.css';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
     {/* <Route path="/search/:query" element={<SearchResults />} /> */}
     <Route path="/recipe/:id" element={<Recipie_page />} />
 </Routes>
+<Footer />
 </BrowserRouter>
 
 
