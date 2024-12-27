@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 import Ingredients from './Ingredients';
+import { useParams } from 'react-router-dom';
 
 const Recipie_page = () => {
+    const { id } = useParams();
     const [recipe,SetRecipie]=useState([]);
     const [loading,SetLoading]=useState(true)
+    const BASE_URL = "https://api.spoonacular.com/recipes";
+    const apiKey = '3ded09f5fc054e248d1137dc1a6e93a9';
+  
 
     const load=async()=>{
-        const data=await fetch("https://api.spoonacular.com/recipes/716627/information?apiKey=3ded09f5fc054e248d1137dc1a6e93a9");
+        const data=await fetch(`${BASE_URL}/${id}/information?apiKey=${apiKey}`);
         const output=await data.json();
         console.log(output);
         SetLoading(false)
@@ -34,7 +39,9 @@ const Recipie_page = () => {
 
 
     </div>
+
          <Ingredients props={recipe}/>
+         
     </>
    )
 }

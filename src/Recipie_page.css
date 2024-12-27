@@ -102,3 +102,21 @@
  .p-datatable .p-datatable-tbody > tr:hover {
     background-color: rgba(111, 106, 177, 0.1) !important; /* Light purple hover */
 }
+
+.search{
+    padding: '10px 20px';
+    border-radius: '5px';
+    border: 'none';
+    background-color: '#6f6ab1';
+    color: '#fff';
+    cursor: 'pointer';
+  }
+
+
+  .put{
+    padding: '10px';
+    width: '300px';
+    margin-right: '10px';
+    border-radius: '5px';
+    border: '1px solid #ccc';
+  }
