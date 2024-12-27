@@ -7,7 +7,7 @@ const Recipie_page = () => {
     const [recipe,SetRecipie]=useState([]);
     const [loading,SetLoading]=useState(true)
     const BASE_URL = "https://api.spoonacular.com/recipes";
-    const apiKey = '3ded09f5fc054e248d1137dc1a6e93a9';
+    const apiKey = import.meta.env.VITE_API_KEY;
   
 
     const load=async()=>{
